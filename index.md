@@ -8,3 +8,4 @@ title: demo
 + [学渣测试](./page/test/index.html)
 + [box-shadow](./page/box-shadow/)
 + [渐变](./page/gradient/gradient.html)
++ [jQuery 插件 - alert 提示框](./page/alert/index.html)
