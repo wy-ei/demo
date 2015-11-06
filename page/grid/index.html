@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>grid</title>
+</head>
+<body>
+  <header>
+    <ul class="menu">
+      <li class="selected">E币兑换</li>
+      <li>E币明细</li>
+      <li>兑换记录</li>
+    </ul>
+  </header>
+  <section class="content">
+    <header>
+        <button class="btn btn-info">全部</button>
+        <button class="btn">成功</button>
+        <button class="btn">失败</button>        
+        <label>选择日期：</label>
+        <input type="text">
+        <label>至</label>
+        <input type="text">
+        <button class="btn btn-info">搜索</button>
+        <button class="btn btn-danger">重置</button>
+    </header>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>时间</th>
+            <th>商品名称</th>
+            <th>数量</th>
+            <th>E币</th>
+            <th>状态</th>
+            <th>信息</th>
+            <th>兑换信息</th>
+            <th>确认</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>2014-10-28</p>
+              <p>15:37:21</p>
+            </td>
+            <td>手机50元话费充值</td>
+            <td>1</td>
+            <td>190</td>
+            <td>兑换失败</td>
+            <td>充值失败，E币已退回</td>
+            <td>
+              <button class="btn btn-info">兑换信息</button>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>2014-10-28</p>
+              <p>15:37:21</p>
+            </td>
+            <td>手机50元话费充值</td>
+            <td>1</td>
+            <td>190</td>
+            <td>兑换失败</td>
+            <td>充值失败，E币已退回</td>
+            <td>
+              <button class="btn btn-info">兑换信息</button>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>2014-10-28</p>
+              <p>15:37:21</p>
+            </td>
+            <td>手机50元话费充值</td>
+            <td>1</td>
+            <td>190</td>
+            <td>兑换失败</td>
+            <td>充值失败，E币已退回</td>
+            <td>
+              <button class="btn btn-info">兑换信息</button>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>2014-10-28</p>
+              <p>15:37:21</p>
+            </td>
+            <td>手机50元话费充值</td>
+            <td>1</td>
+            <td>190</td>
+            <td>兑换失败</td>
+            <td>充值失败，E币已退回</td>
+            <td>
+              <button class="btn btn-info">兑换信息</button>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <p>2014-10-28</p>
+              <p>15:37:21</p>
+            </td>
+            <td>手机50元话费充值</td>
+            <td>1</td>
+            <td>190</td>
+            <td>兑换失败</td>
+            <td>充值失败，E币已退回</td>
+            <td>
+              <button class="btn btn-info">兑换信息</button>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <footer>
+          <div>
+            <button>首页</button>
+            <span>1</span>
+            <button>末页</button>
+            <span>共一页，跳转到</span>
+            <input type="text" name="page-no">
+            <span>页</span>
+            <button>确认</button>  
+          </div>
+      </footer>
+    </section>
+  </section>
+  <script type="text/javascript">
+  var menu = document.getElementsByClassName('menu')[0];
+  menu.addEventListener('click', function(event){
+    if(event.target.tagName.toLowerCase()==='li'){
+      var currentSelected = document.getElementsByClassName('selected')[0];
+      if(currentSelected){
+        currentSelected.classList.remove('selected');
+      }
+      event.target.classList.add('selected');
+    }
+  });
+  </script>
+</body>
+</html>
