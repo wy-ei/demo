@@ -1,0 +1,297 @@
+body{
+	max-width: 600px;
+	margin: auto;
+	font-size:15px; 
+}
+a{
+	text-decoration: none;
+}
+ul,li{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+header{
+	position: relative;
+	color: #fff;
+	background-color: #2384b8;
+}
+header h1{
+	margin: 0;
+	font-size: 1.5em;
+	padding: 15px 0;
+	text-align: center;
+}
+header .back{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+header .home{
+	position: absolute;
+	top: 0;
+	right: 10px;
+	width: 32px;
+}
+header .home a{
+	color: #fff;
+}
+header .home a img{
+	position: relative;
+	top: 5px;
+}
+
+.picture{
+	position: relative;
+	height: 220px;
+}
+.picture img{
+	width: 100%;
+	height: 100%;
+}
+.picture span{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 5px;
+	color: #fff;
+	background-color: rgba(30,30,30,0.6);
+	text
+}
+
+.info{
+	font-size: 1.3em;
+}
+
+.info a{
+	color: #2384b8;
+}
+
+.info p{
+	margin: 0;
+}
+
+.info ul{
+	border-bottom: 1px solid #aaa;
+}
+
+.info ul li{
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	border-bottom: 1px dashed #aaa;
+	margin: 0 15px;
+	padding: 15px 0;
+}
+.info ul li:last-of-type{
+	border-bottom: none;
+}
+
+.info span.tel{
+	margin-left: 20px;
+}
+.more{
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	margin: 0;
+	vertical-align: bottom;
+	padding-left: 10px;
+	background: url(./images/iconfont-more.png);
+	background-size: 100% 100%;
+}
+
+.addtion-info{
+	font-size: 0.9em;
+	color: #aaa;
+}
+
+.order-section{
+	margin-top: 20px;
+	font-size: 1.3em;
+}
+
+.order-section p{
+	position: relative;
+	margin: .1em;
+}
+
+.order-section li{
+	overflow: hidden;
+	display: -webkit-flex;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	padding: 15px;
+	border-top:1px solid #aaa; 
+	margin: none;
+	position: relative;
+
+}
+
+.order-section li:last-of-type{
+	border-bottom:1px solid #aaa;
+} 
+
+.order-section .calendar span+span{
+	margin-left: 20px;
+}
+
+.promotion .ticket{
+	padding: 2px;
+	background-color: red;
+	color: #fff;
+	font-size: 0.8em;
+}
+.promotion .night-selling,.promotion .group-buying{
+	padding: 2px;
+	background-color: #2384b8;
+	color: #fff;
+	font-size: 0.8em;
+}
+
+.order-type{
+	width: 54%;
+}
+.order-price{
+	width: 26%;
+}
+.order{
+	width: 18%;
+	border-radius: 8px;
+	text-align: center;
+	border:1px solid #C77116;
+	overflow: hidden;
+}
+.order p{
+	margin: 0;
+	font-size: 1.5em;
+	font-weight: bold;
+	background-color: #C77116;
+	color: #fff;
+}
+.order span{
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color:#fff ;
+	color: #C77116;
+}
+
+
+.order-price p{
+	font-size: 0.8em;
+	text-align: right;
+}
+
+.order-section .price{
+	font-size: 1.5em;
+	color: #C77116;
+	font-weight: bold;
+}
+.cheapest{
+	margin-left: 5px;
+	color: #fff;
+	background-color: #e77116;
+	font-size: 0.8em;
+	padding: 2px;
+}
+.most{
+	background-color: #fff;
+	color: #C77116;
+	border: 1px solid #C77116;
+	font-size: 0.8em;
+}
+.most>span{
+		color: #fff;
+	background-color: #C77116;
+}
+li.justify-content-center{
+	justify-content:center;
+}
+
+.compare{
+	color: #fff;
+	background-color: #2384b8;
+	padding: 0 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.compare p{
+	display: inline-block;
+}
+.compare span{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url(./images/iconfont-back.png);
+	background-size: 100% 100%;
+}
+.compare .low{
+	-webkit-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+.compare .high{
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.price span{
+	margin: 0;
+	font-size: 0.7em;
+	color: #aaa;
+}
+
+.nearbt-hotel{
+	margin-top:20px; 
+}
+
+.nearbt-hotel li{
+	padding: 20px 15px;
+	border-top:1px solid #aaa; 
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.nearbt-hotel li:last-of-type{
+	border-bottom:1px solid #aaa;
+}
+.nearbt-hotel li p{
+	margin: 0;
+	font-size: 1.2em;
+}
+.nearbt-hotel .count{
+	color: #2384b8;
+}
+
+.footer{
+	color: #aaa;
+}
+.footer ul{
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	padding: 20px 40px;
+}
+.footer ul li{
+	display: inline-block;
+}
+.footer ul li img{
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.footer ul li a{
+	vertical-align: middle;
+	text-decoration: underline;
+	color: #aaa;
+}
+footer div{
+	text-align: center;
+	margin-bottom: 20px;
+}
+footer div a{
+	color: #aaa;
+	margin-right: 30px;
+}

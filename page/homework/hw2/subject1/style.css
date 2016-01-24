@@ -1,0 +1,326 @@
+body{
+	margin: 0;
+	font-size: 12px;
+	color: #333;
+}
+a{
+	text-decoration: none;
+}
+header{
+	background-color: #F5F5F5;
+}
+header nav{
+	margin: auto;
+	width: 990px;
+	overflow: hidden;
+}
+header nav ul{
+	display: inline;
+	margin:0;
+	padding: 8px 0;
+	list-style:none;
+}
+
+header .nav-l{
+	float: left;
+}
+header .nav-r{
+	float: right;
+}
+header nav ul>li{
+	padding-right: 10px;
+	display: inline;
+}
+header a{
+	color: #333;
+}	
+header a:hover{
+	color: #F22E00;
+}
+a.highlight{
+	color: #F22E00;
+}
+.nav-login{
+	display: inline;
+}
+
+.download-wrap{
+	width: 990px;
+	margin: auto;
+	overflow: hidden;
+}
+.logo{
+	float:left;
+}
+.download-nav{
+	float: right;
+	margin-top: 20px;
+}
+.download-nav ul{
+	list-style: none;
+	display: inline-block;
+}
+.download-nav ul li{
+	list-style: none;
+	display: inline;
+	padding-right: 15px;
+}
+.download-nav ul li a{
+	font-size: 1.2em;
+	color: #39C;
+}
+.download-nav ul li a:hover{
+	color: #ff6700;
+	border-bottom: 1px solid #ff6700;
+}
+.slide-container{
+	position: relative;
+	height: 450px;
+}
+
+.slide-container a.prev,.slide-container a.next{
+	position: absolute;
+	z-index: 10;
+	display: block;
+	width: 100px;
+	height: 100%;
+	background-color: transparent;
+}
+.slide-container .prev{
+	top: 0;
+	left: 0;
+}
+
+.slide-container .next{
+	top: 0;
+	right: 0;
+}
+.slide-container .prev:hover,.slide-container .next:hover{
+	/*opacity: 0.4;*/
+}
+
+.slide-container a span{
+	position: absolute;
+	top: 50%;
+	left: 37px;
+	margin-top: -25px;
+	width: 25px;
+	height: 50px;
+	background-image: url(./images/arrow.png);
+}
+
+.slide-container .prev span{
+	background-position:0 -200px;
+}
+.slide-container .prev:hover span{
+	background-position:0 -300px;
+}
+.slide-container .next span{
+	background-position:0 0;
+}
+.slide-container .next:hover span{
+	background-position:0 -100px;
+}
+
+.slide-container .wrap{
+	position: relative;
+	height: 100%;
+	width: 1280px;
+	margin: auto;
+	overflow: hidden;
+}
+.slide-container .wrap .bg-img-wrap{
+	position: absolute;
+	width: 10000px;
+	left: 0;
+}
+
+.slide-container .wrap .bg-img{
+	display: inline-block;
+}
+
+.slide-container .dialog{
+	position: absolute;
+	top: 40px;
+	right: 50px;
+	width: 390px;
+	height: 350px;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 2px 2px 4px 0 #ccc,
+		-2px 0 4px 0 #ccc;
+}
+.slide-container .dialog h1{
+	margin: 25px;
+	font-size: 2em;
+}
+.slide-container .dialog p{
+	margin: 0 25px 25px 25px;
+	font-size: 1.1em;
+}
+.slide-container .dialog a.download-btn{
+	display: block;
+	width: 176px;
+	height: 58px;
+	margin-left: 25px;
+	background-image: url(./images/download-btn.png);
+	background-position: 0 0;
+}
+.slide-container .dialog a.download-btn:active{
+	background-position: 0 -109px;
+}
+
+.slide-container .dialog .download-zone img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.slide-container .dialog .download-zone div{
+	display: inline-block;
+}
+
+.slide-container .dialog .text-img{
+	width:189px;
+	height: 72px;
+	margin-left: 25px; 
+}
+
+.slide-container .dialog .qr-img{
+	width:130px;
+	height: 130px;
+}
+.slide-container .dialog .qr-img img{
+	margin: 25px 0 0 10px;
+}
+
+footer{
+	background-color: #F5F5F5;
+}
+footer p{
+	text-align: center;
+	padding: 30px 0;
+	margin: 0;
+	color: #999;
+}
+footer a{
+	color: #999;
+}
+footer a:hover{
+	text-decoration: underline;
+}
+
+footer a,footer span{
+	margin-right: 20px;
+}
+
+.popup{
+	position: fixed;
+	z-index: 100;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.popup:after{
+	content:" ";
+	height:100%;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.popup-wrap{
+	position: relative;
+	width: 800px;
+	vertical-align:middle;
+	display: inline-block;
+	background-color: #fff;
+}
+
+.popup .close-popup{
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: -15px;
+	right: -15px;
+	cursor: pointer;
+	background-image: url(./images/close-1.png);
+}
+.popup .close-popup:hover{
+	background-image: url(./images/close-2.png);
+}
+
+.device-list{
+	margin: 40px 10px 40px 10px;
+}
+.device-list ul{
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+.device-list ul li{
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border:1px solid #fff;
+	cursor: pointer;
+}
+.device-list ul li:hover{
+	border:1px solid #ccc;
+}
+
+.popup .download-method{
+	background-color: #f9f7f5;
+	padding: 40px 100px;
+	overflow: hidden;
+}
+.popup .download-method .direct-download{
+	display: inline-block;
+	width: 60%;
+	vertical-align: top;
+
+}
+.popup .download-method p{
+	text-align: center;
+}
+.popup .download-method .direct-download .btn-group{
+	margin: auto;
+	width: 340px;
+}
+
+.popup .download-method .direct-download a{
+	display: inline-block;
+	width: 161px;
+	height: 48px;
+}
+
+.popup .download-via-store{
+	background: url(./images/download-free.png);
+}
+.popup .download-to-pc{
+	background: url(./images/download-to-pc.png);
+}
+
+.popup .download-method .qr-download{
+	display: inline-block;
+	width: 30%;
+}
+
+.popup .download-method .qr-download .qr-wrap{
+	background-image: url(./images/qr-background.png);
+	width: 144px;
+	height: 180px;
+	margin: auto;
+}
+
+.popup .qr-wrap img{
+	width: 120px;
+	height: 120px;
+	margin-top: 20px; 
+}
+
+
