@@ -1,0 +1,20 @@
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+gems:
+  - jemoji
+
+emoji:
+  src: "http://o9e14tvsd.bkt.clouddn.com"
+
+sass:
+  sass_dir: src/scss
+  style: compressed
+
+title: 即刻出发
+author :
+  name : wy-ei
+  email : nameiswangyu@163.com
+  github : wy-ei

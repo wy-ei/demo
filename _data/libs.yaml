@@ -1,0 +1,9 @@
+test:
+  type: js
+  url: '/src/test.js'
+vue:
+  type: js
+  url: '//cdn.bootcss.com/vue/2.0.0-rc.5/vue.min.js'
+jquery:
+  type: js
+  url: '//cdn.bootcss.com/jquery/3.1.0/jquery.min.js'
