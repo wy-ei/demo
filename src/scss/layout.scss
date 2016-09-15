@@ -5,6 +5,8 @@ body{
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  min-width: 1000px;
+  overflow: scroll;
 }
 
 .m-header{
