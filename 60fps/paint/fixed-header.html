@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+            /*transform: translateZ(0);*/
+        }
+        .content{
+            height: 2000px;
+            width: 100%;
+            background: linear-gradient(0deg, #333 0%, #999 100%);
+        }
+        .isolate{
+            transform: translateZ(0);
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="header">60 fps</header>
+    <div class="content"></div>
+    <script>
+        let header = document.getElementById('header');
+        header.addEventListener('click', function(){
+            header.classList.toggle('isolate')
+        })
+    </script>
+</body>
+</html>

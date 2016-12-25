@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .fps__container{
+            max-width: 500px;
+        }
+        .fps__rect{
+            width: 50px;
+            height: 20px;
+            border: 3px;
+            background: green;
+            will-change: transform;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+            display: inline-block;
+            animation: move 1s infinite alternate;
+        }
+        .fps__text{
+            height: 100%;
+            width: 50px;
+            margin: 0;
+            padding: 0;
+            line-height: 50px;
+            text-align: center;
+            color: #000;
+            display: inline-block;
+            vertical-align: bottom;
+            padding-right: 10px;
+            border-right: 1px solid #ccc;
+            margin-right: 10px;
+        }
+        .fps__row{
+            border: 1px solid #ccc;
+            border-bottom: none;
+            box-sizing: border-box;
+            padding: 0 10px;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .fps__row:last-of-type{
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="fps" class="fps__container"></div>
+    <script>
+        var container = document.getElementById('fps');
+        var distance = container.clientWidth - 140;
+        var items = document.createDocumentFragment();
+        for(var i=60; i>0; i-=10){
+            var fps = i;
+            var section = document.createElement('section');
+            section.setAttribute('class','fps__row');
+            var div = document.createElement('div');
+            div.setAttribute('class', 'fps__rect');
+            div.style.animationTimingFunction = 'steps(' + fps +', end)';
+            var p = document.createElement('p');
+            p.setAttribute('class', 'fps__text');
+            p.innerHTML = fps + 'fps';
+            section.appendChild(p);
+            section.appendChild(div);
+            items.appendChild(section);
+        }
+        container.appendChild(items);
+        document.styleSheets[0].insertRule([
+            '@keyframes move{',
+                '0% {transform: translateX(0);}',
+                '100% {transform: translateX(' + distance + 'px);}',
+            '}'
+        ].join(''), 0);
+    </script>
+</body>
+</html>

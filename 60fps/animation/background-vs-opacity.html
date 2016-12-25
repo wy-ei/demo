@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用 background 完成渐变 vs 使用 opacity 完成渐变</title>
+    <style>
+        #opacity{
+            width: 320px;
+            height: 560px;
+            position: relative;
+        }
+        #opacity div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: change-opacity 1s linear infinite both;
+        }
+        #opacity div:nth-child(1){
+            background: #f00;
+            animation-direction: alternate-reverse;
+        }
+        #opacity div:nth-child(2){
+            background: #00f;
+            animation-direction: alternate;
+        }
+        #background{
+            width: 320px;
+            height: 560px;
+            animation: change-background 4s linear infinite alternate both;
+        }
+        .active{
+            background: blue;
+            color: #fff;
+            outline: none;
+            border: none;
+        }
+        button{
+            display: block;
+            margin: 10px;
+        }
+        @keyframes change-background {
+            0%{
+                background: #f00;
+            }
+            100%{
+                background: #00f;
+            }
+        }
+        @keyframes change-opacity {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--<button id="btn-opacity" class="active">使用 opacity 来完成颜色渐变动画</button>
+    <button id="btn-background">使用 background 来完成渐变动画</button>-->
+
+    <div id="opacity">
+        <div></div>
+        <div></div>
+    </div>
+    <div id="background" style="display: none;">
+    </div>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script>
+        $('#btn-opacity').click(function(){
+            $(this).addClass('active');
+            $('#btn-background').removeClass('active');
+            $('#opacity').show();
+            $('#background').hide();
+        });
+
+        $('#btn-background').click(function(){
+            $(this).addClass('active');
+            $('#btn-opacity').removeClass('active');
+            $('#background').show();
+            $('#opacity').hide();
+        });
+
+    </script>
+</body>
+</html>

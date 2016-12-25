@@ -19,7 +19,7 @@
     </footer>
     <script>
         var LibData = {{ site.data.libs | jsonify }};
-        var libUsed = "{{ page.lib | join:','| }}";
+        var libUsed = "{{ page.lib | join:',' }}";
     </script>
     <script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script>
     <script src="{{site.base_path}}/src/script/app.js"></script>

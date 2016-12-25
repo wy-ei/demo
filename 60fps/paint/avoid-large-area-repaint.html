@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/style.css">
+    <title>avoid large area repaint</title>
+    <style>
+        .panel{
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 1px 1px #ccc;
+            background-color: #eee;
+            padding: 10px;
+        }
+        .panel__title{
+            width: 100%;
+            height: 20px;
+            line-height: 1.5;
+            margin: 10px 0;
+            background-color: #ddd;
+        }
+        .panel__content{
+            height: 200px;
+            background: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .panel__content-text{
+            color: #f0f;
+        }
+        .accelerate{
+            transform: translateZ(0);
+        }
+
+    </style>
+</head>
+<body>
+    <button class="btn btn__active" id="isolate">提升至单独图层</button>
+    <button class="btn" id="no-isolate">放回原图层</button>
+    <div class="panel">
+        <h1 class="panel__title"></h1>
+        <div class="panel__content">
+            <p class="js-text panel__content-text accelerate">闪烁的内容</p>
+        </div>
+    </div>
+    <p>打开 DevTools 来观察重绘面积</p>
+    <script src="../lib/jquery.min.js"></script>
+    <script>
+
+        let text = $('.js-text').get(0);
+        let i = 0;
+        setInterval(function(){
+            text.style.background = i % 2 === 0 ? 'red' : 'yellow';
+            i += 1;
+        },500);
+
+        $('#isolate').click(function(){
+            $(this).addClass('btn__active');
+            $('#no-isolate').removeClass('btn__active');
+            $('.js-text').addClass('accelerate');
+        });
+        $('#no-isolate').click(function(){
+            $(this).addClass('btn__active');
+            $('#isolate').removeClass('btn__active');
+            $('.js-text').removeClass('accelerate');
+        });
+    </script>
+</body>
+</html>

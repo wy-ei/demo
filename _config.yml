@@ -3,17 +3,11 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-gems:
-  - jemoji
-
-emoji:
-  src: "http://o9e14tvsd.bkt.clouddn.com"
-
 sass:
   sass_dir: src/scss
   style: compressed
 
-base_path: '/demo'
+base_path: ''
 
 title: 即刻出发
 author :
