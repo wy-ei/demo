@@ -6,10 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>使用 background 完成渐变 vs 使用 opacity 完成渐变</title>
     <style>
-        #opacity{
-            width: 320px;
-            height: 560px;
-            position: relative;
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            position: absolute;
         }
         #opacity div{
             width: 100%;
@@ -28,8 +34,6 @@
             animation-direction: alternate;
         }
         #background{
-            width: 320px;
-            height: 560px;
             animation: change-background 4s linear infinite alternate both;
         }
         .active{
@@ -39,7 +43,6 @@
             border: none;
         }
         button{
-            display: block;
             margin: 10px;
         }
         @keyframes change-background {
@@ -61,14 +64,14 @@
     </style>
 </head>
 <body>
-    <!--<button id="btn-opacity" class="active">使用 opacity 来完成颜色渐变动画</button>
-    <button id="btn-background">使用 background 来完成渐变动画</button>-->
+    <button id="btn-opacity" class="active">使用 opacity 来完成颜色渐变动画</button>
+    <button id="btn-background">使用 background 来完成渐变动画</button>
 
-    <div id="opacity">
+    <div id="opacity" class="container">
         <div></div>
         <div></div>
     </div>
-    <div id="background" style="display: none;">
+    <div id="background" class="container" style="display: none;">
     </div>
 
     <script src="../lib/jquery.min.js"></script>
