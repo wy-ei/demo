@@ -7,7 +7,7 @@ sass:
   sass_dir: src/scss
   style: compressed
 
-base_path: ''
+base_path: 'demo'
 
 title: 即刻出发
 author :
