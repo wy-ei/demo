@@ -20,10 +20,11 @@
             margin-top: -12px;
             margin-left: -25px;
             color: inherit;
-            border-width: inherit;
-            border-color: red;
             width: 60px;
             text-align: center;
+        }
+        #container div p{
+            border: 1px solid #ccc;
         }
         .outer{
             animation: circle1 10s linear infinite;
@@ -42,8 +43,8 @@
             box-shadow: 0 5px 6px 0 #000;
         }
 
-        .border-ani{
-            animation: change-border 10s linear infinite;
+        .width-ani div p{
+            animation: change-width 5s linear alternate-reverse infinite;
         }
         .color-ani{
             animation: change-color 10s linear infinite;
@@ -58,12 +59,12 @@
             }
         }
 
-        @keyframes change-border {
+        @keyframes change-width {
             0%{
-                border-width: 1px;
+                width: 60px;
             }
             100%{
-                border-width: 5px;
+                width: 100px;
             }
         }
 
@@ -88,7 +89,7 @@
 <body>
     <button class="btn btn__active" id="start">开始动画</button>
     <button class="btn" id="color">给每个元素加上字体颜色渐变</button>
-    <button class="btn" id="border-radius">给每个元素加上边框渐变</button>
+    <button class="btn" id="width">改变元素宽度</button>
     <script src="../lib/jquery.min.js"></script>
     <div id="container" class="start">
 
@@ -96,18 +97,18 @@
     <script>
         var time = 10000;
         var $container = $('#container');
-        for (var i = 0; i < 60; i++){
+        for (var i = 0; i <= 60; i++){
             var div = document.createElement('div');
-            div.innerHTML =  i + ' fps';
+            div.innerHTML =  '<p>'  + i + ' fps</p>';
             div.classList.add('outer');
-            div.style.animationDelay = -(time / 60) * i + 'ms';
+            div.style.animationDelay = -(time / 61) * i + 'ms';
             $container.append(div);
         }
-        for (var i = 0; i < 60; i++){
+        for (var i = 0; i <= 30; i++){
             var div = document.createElement('div');
-            div.innerHTML = i + ' fps';
+            div.innerHTML = '<p>' + i * 2 + ' fps</p>';
             div.classList.add('inner');
-            div.style.animationDelay = -(time / 60) * i + 'ms';
+            div.style.animationDelay = -(time / 31) * i + 'ms';
             $container.append(div);
         }
 
@@ -121,8 +122,8 @@
             $(this).toggleClass('btn__active');
         });
 
-        $('#border-radius').on('click', function(){
-            $container.toggleClass('border-ani');
+        $('#width').on('click', function(){
+            $container.toggleClass('width-ani');
             $(this).toggleClass('btn__active');
         });
     </script>
