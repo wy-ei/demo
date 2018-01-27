@@ -1,9 +1,0 @@
-underscore:
-  type: js
-  url: '//cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js'
-vue:
-  type: js
-  url: '//cdn.bootcss.com/vue/2.0.0-rc.5/vue.min.js'
-jquery:
-  type: js
-  url: '//cdn.bootcss.com/jquery/3.1.0/jquery.min.js'
